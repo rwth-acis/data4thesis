@@ -47,7 +47,7 @@
   
   foreach ($flatten as $key => $value) {
     $pos = array_search($key, $header);
-    if (!$pos) {
+    if ($pos === false) {
       $pos = count($header);
       insertAtPosition($header, $pos, $key);
     }
